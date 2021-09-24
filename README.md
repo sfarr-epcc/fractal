@@ -1,14 +1,15 @@
 # Fractal code for training purposes. 
 
-Makes an image of the Mandelbrot set or the Julia set  and demostrates 
+Makes an image of the Mandelbrot set or the Julia set  and demonstrates 
 parallel load balancing in a task farm.
 
-to compile use the provided makefile
+To compile use the provided makefile
 
 	make
 
+Note that this code contains some Linux specific C header files so will only compile on Linux.
 
-The program must be run using mpi, e.g.
+The program must be run using mpi with at least 2 processes, e.g.
 
 	mpirun -np 2 fractal
 
@@ -16,11 +17,11 @@ or
 
 	srun -n 2 fractal
 
-to see all options use the help flag
+To see all options use the help flag
 
-	fracal -h
+	fractal -h
 
-which gives the following output
+Which gives the following output
 ~~~
 Usage:
 fractal [-SixXyYfth]
